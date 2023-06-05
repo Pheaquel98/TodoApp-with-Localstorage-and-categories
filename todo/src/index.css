@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checked {
+  @apply line-through text-red-500 italic;
+}
+
+.checkbox {
+  @apply pointer-events-none cursor-not-allowed;
+}
+
+.input {
+  @apply opacity-70;
+}

@@ -4,6 +4,7 @@ import Work from "./components/Work"
 import School from "./components/School"
 import Home from "./components/Home"
 import reactlogo from "./images/reactlogo.png"
+import { message } from "antd"
 
 function App() {
   const [todo, setTodo] = useState("")
@@ -34,11 +35,11 @@ function App() {
 
   const handleClick = () => {
     if (todo.trim().length === 0) {
-      alert("Please write some Task.")
+      message.error("Please write some task!")
       return
     }
     if (value === "") {
-      alert("Please select category.")
+      message.error("Please select category!")
       return
     }
     if (value === "work") {
@@ -78,6 +79,7 @@ function App() {
       ])
     }
     setTodo("")
+    message.success("Task added.")
   }
 
   const handleDelete = (id) => {
